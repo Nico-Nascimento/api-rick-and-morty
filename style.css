@@ -1,0 +1,297 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ///////////////////////////////////////  HEADER    //////////////////////////// */
+
+.header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imageLogo {
+  align-self: flex-start;
+  z-index: 1;
+  width: 200px;
+  height: 100px;
+  margin-top: 25px;
+}
+
+.imageLogo img {
+  width: 150px;
+  height: 80px;
+}
+
+@media screen and (max-width: 480px) {
+  .imageLogo {
+    width: 100px;
+    height: 50px;
+  }
+  .imageLogo img {
+    width: 100px;
+    height: 50px;
+  }
+}
+
+.tituloBusca {
+  margin-top: -100px;
+}
+
+.tituloBusca h1 {
+  background-image: linear-gradient(127deg, #ff008c, #dbcb5a, #0c910f, #ff008c);
+  background-size: 200%;
+  text-align: center;
+  color: rgba(16, 87, 24, 0);
+  font-size: 8vh;
+  font-weight: 900;
+  animation: titulo 8s infinite cubic-bezier(1, 1, 1, 1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes titulo {
+  0% {
+    background-position: -100%;
+  }
+  50% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+#titlePage {
+  position: relative;
+  background-image: linear-gradient(127deg, #ff008c, #dbcb5a, #ff008c);
+  background-size: 200%;
+  background-position: -100%;
+  text-align: center;
+  color: rgba(16, 87, 24, 0);
+  font-size: 10vh;
+  font-weight: 900;
+  margin: 1rem;
+  animation: titulo 2s infinite cubic-bezier(1, 1, 1, 1);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
+.campoBusca {
+  display: flex;
+  margin: 5px;
+}
+
+.campoBusca button {
+  border: 1.5px solid gray;
+  border-left: none;
+  border-radius: 0px 10px 10px 0px;
+  background-color: white;
+  margin-top: 20px;
+  width: 50px;
+  height: 52px;
+}
+
+.campoBusca input {
+  padding-left: 25px;
+  width: 100%;
+  height: 50px;
+  border: 1.5px solid gray;
+  border-right: none;
+  border-radius: 10px 0px 0px 10px;
+  margin-top: 20px;
+}
+
+.campoBusca i {
+  color: #12561a;
+}
+
+.campoBusca ::placeholder {
+  color: gray;
+  font-weight: 700;
+}
+
+/* ///////////////////////////////////////   MAIN     //////////////////////////// */
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  justify-content: space-around;
+}
+
+.personagem-item {
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  height: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.personagem-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.personagem-foto {
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+.personagem-nome {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #12561a;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.personagem-status,
+.personagem-ultimaLocalizacao,
+.personagem-ultimoEpisodio {
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.descricaoLocalizacao,
+.descricaoEpfinal {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: gray;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.imagemMain,
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagemMain img {
+  width: 500px;
+  height: 500px;
+  animation: portal 10s infinite cubic-bezier(1, 1, 1, 1);
+}
+
+@keyframes portal {
+  0% {
+    rotate: 0deg;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  20% {
+    rotate: 10deg;
+    max-width: 420px;
+    max-height: 420px;
+  }
+  60% {
+    rotate: 0deg;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  80% {
+    rotate: -10deg;
+    max-width: 420px;
+    max-height: 420px;
+  }
+  100% {
+    rotate: 0deg;
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+
+.botaoProximo {
+  margin: 25px;
+  font-size: 20px;
+  font-family: monospace;
+  background-color: #f3f7fe;
+  color: #12561a;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: 0.3s;
+}
+
+.botaoProximo:hover {
+  background-color: #01cc18;
+  box-shadow: 0 0 0 5px #003606;
+  color: #fff;
+}
+
+/* ///////////////////////////////////////   FOTTER     //////////////////////////// */
+
+.footer {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  background-color: #12561a;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoGerais {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#localizacao {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #d9d9d9;
+}
+
+#quantidadePersonagens {
+  font-size: 25px;
+  font-weight: 700;
+  color: #d9d9d9;
+}
+
+#episodio {
+  font-size: 25px;
+  font-weight: 700;
+  color: #d9d9d9;
+}
+
+.autorais p {
+  display: flex;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #d9d9d9;
+}
+
+.autorais a {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+}
